@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>As Filhas de Mara</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #222;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    }
+    h1 {
+      color: #ff0033;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-top: 40px;
+      color: #ffcc00;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      max-height: 400px;
+      overflow-y: auto;
+      text-align: left;
+    }
+    ul li {
+      background: rgba(255, 255, 255, 0.08);
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .destaque {
+      background: rgba(255, 0, 0, 0.2);
+      color: #ff4d4d;
+      font-size: 1.3em;
+      border: 2px solid #ff0033;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>As Filhas de Mara</h1>
+    <p>
+      Em tempos sombrios, surgiram mulheres tocadas pela corrupção de Mara — uma entidade antiga, nascida do caos.<br />
+      <strong>Essas mulheres caminham entre nós</strong>, mascarando intenções sombrias com rostos angelicais.<br />
+      Elas são sedutoras, manipuladoras... e letais. Os lábios da mulher imoral podem ser tão doces como o mel, e os seus beijos, 
+      tão suaves como o azeite; porém, quando tudo termina, o que resta é amargura e sofrimento.
+    </p>
+
+    <h2>Lista das Corrompidas</h2>
+
+    <ul id="listaNomes">
+      
+    </ul>
+  </div>
+
+  <script>
+    const nomesBase = [
+      "Beatriz/s", "Maria Clara", "Maria Eduarda", "Maria Beatriz",
+      "Vitoria/Victoria", "Bianca", "Debora", "Camila", "Daniela", "Elisa",
+      "Fernanda", "Gabriela", "Helena", "Isabela", "Juliana", "Karina", "Larissa",
+      "Mariana", "Natália", "Olívia", "Patrícia", "Queila", "Rafaela", "Sabrina",
+      "Tatiane", "Úrsula", "Vanessa", "Wanda", "Yasmin", "Zuleica", "Adriana",
+      "Amanda", "Cíntia", "Débora", "Eliane", "Flávia", "Gláucia", "Heloísa",
+      "Ingrid", "Jéssica", "Kelly", "Lúcia", "Mônica", "Nicole", "Paloma", "Regina",
+      "Simone", "Teresa", "Vânia", "Alice", "Bruna", "Clara", "Daiane", "Ester",
+      "Fabiana", "Gisele", "Hortência", "Ivana", "Joyce", "Kátia", "Lídia",
+      "Milena", "Nívea", "Priscila", "Renata", "Samara", "Talita", "Valéria",
+      "Anelise", "Brenda", "Clarissa", "Dayane", "Emiliane", "Fabíola", "Glória",
+      "Hilda", "Inês", "Jordana", "Katiane", "Laila", "Mirela", "Nara", "Penélope",
+      "Rayane", "Sheila"
+    ];
+
+    const nomes = ["Julia/Giulia", ...nomesBase.sort((a, b) => a.localeCompare(b))];
+
+    const ul = document.getElementById('listaNomes');
+
+    function renderizarLista(array) {
+      ul.innerHTML = '';
+      array.forEach(nome => {
+        const li = document.createElement('li');
+        if (nome === 'Julia/Giulia') {
+          li.classList.add('destaque');
+        }
+        li.textContent = nome;
+        ul.appendChild(li);
+      });
+    }
+    renderizarLista(nomes);
+  </script>
+</body>
+</html>
