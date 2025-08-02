@@ -87,7 +87,7 @@
       "Vitoria/Victoria", "Bianca", "Debora", "Camila", "Daniela", "Elisa",
       "Fernanda", "Gabriela", "Helena", "Isabela", "Juliana", "Karina", "Larissa",
       "Mariana", "Natália", "Olívia", "Patrícia", "Queila", "Rafaela", "Sabrina",
-      "Tatiane", "Úrsula", "Vanessa", "Wanda", "Yasmin", "Zuleica", "Adriana",
+      "Tatiane", "Úrsula", "Vanessa", "Wanda", "Yasmin", "Adriana",
       "Amanda", "Cíntia", "Débora", "Eliane", "Flávia", "Gláucia", "Heloísa",
       "Ingrid", "Jéssica", "Kelly", "Lúcia", "Mônica", "Nicole", "Paloma", "Regina",
       "Simone", "Teresa", "Vânia", "Alice", "Bruna", "Clara", "Daiane", "Ester",
@@ -95,10 +95,10 @@
       "Milena", "Nívea", "Priscila", "Renata", "Samara", "Talita", "Valéria",
       "Anelise", "Brenda", "Clarissa", "Dayane", "Emiliane", "Fabíola", "Glória",
       "Hilda", "Inês", "Jordana", "Katiane", "Laila", "Mirela", "Nara", "Penélope",
-      "Rayane", "Sheila"
+      "Rayane", "Sheila", "Grazielle"
     ];
 
-    const nomes = ["Julia/Giulia", ...nomesBase.sort((a, b) => a.localeCompare(b))];
+    const nomes = ["Julia/Giulia/Larissa", ...nomesBase.sort((a, b) => a.localeCompare(b))];
 
     const ul = document.getElementById('listaNomes');
 
@@ -106,7 +106,7 @@
       ul.innerHTML = '';
       array.forEach(nome => {
         const li = document.createElement('li');
-        if (nome === 'Julia/Giulia') {
+        if (nome === 'Julia/Giulia/Larissa') {
           li.classList.add('destaque');
         }
         li.textContent = nome;
